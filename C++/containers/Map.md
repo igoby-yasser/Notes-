@@ -96,3 +96,11 @@ int main() {
     std::cout << "Map cleared! Current size: " << myMap.size() << std::endl;
 ```
 
+## 9. Main difference between map and unordered map
+```cpp
+    orderedMap[3] = "Three";
+    orderedMap[1] = "One";
+    orderedMap[2] = "Two";
+    ----> The output is sorted by key.
+```
+
