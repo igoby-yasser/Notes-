@@ -1,7 +1,7 @@
 # Static Array Operations in C++ (std::array)
 
 ## Introduction
-This C++ program demonstrates various operations using `std::array<int, N>`, including insertion, retrieval, updating, deletion, iteration, and clearing elements.
+This C++ program demonstrates various operations using `std::array<int, N>`, including insertion, retrieval, updating, deletion, iteration, and clearing elements. Unlike traditional C-style arrays, `std::array` provides additional safety features like bounds checking with `.at()`, size retrieval, and iterator support.
 
 ## Compilation and Execution
 To compile and run the program, use the following commands in a terminal:
@@ -86,3 +86,20 @@ The `.at(index)` function in `std::array` provides **bounds-checked** access to 
     arr.fill(0);
     std::cout << "Array cleared! All elements set to zero." << std::endl;
 ```
+
+## Additional Operations
+### Get First and Last Elements
+```cpp
+    std::cout << "First element: " << arr.front() << std::endl;
+    std::cout << "Last element: " << arr.back() << std::endl;
+```
+
+### Get Underlying Data Pointer
+```cpp
+    int* dataPtr = arr.data();
+    std::cout << "Pointer to first element: " << *dataPtr << std::endl;
+```
+
+## Conclusion
+`std::array` provides a safer and more functional alternative to C-style arrays by incorporating features like `.at()` for bounds checking, `.size()` for retrieving the number of elements, and `.fill()` for bulk updates. It is a fixed-size container that integrates seamlessly with the STL while maintaining the performance characteristics of C-style arrays.
+
