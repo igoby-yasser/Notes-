@@ -92,6 +92,32 @@ The `.at(index)` function in `std::vector` provides **bounds-checked** access to
     std::cout << "Vector cleared! Current size: " << vec.size() << std::endl;
 ```
 
+## 8. Two-Dimensional Vectors
+```cpp
+#include <iostream>
+#include <vector>
+
+int main() {
+    std::vector<std::vector<int>> matrix(3, std::vector<int>(4, 0)); // 3x4 matrix initialized with 0
+    
+    std::cout << "Enter elements for a 3x4 matrix: \n";
+    for (int i = 0; i < 3; ++i) {
+        for (int j = 0; j < 4; ++j) {
+            std::cin >> matrix[i][j];
+        }
+    }
+    
+    std::cout << "Matrix elements:\n";
+    for (const auto &row : matrix) {
+        for (const auto &element : row) {
+            std::cout << element << " ";
+        }
+        std::cout << std::endl;
+    }
+    return 0;
+}
+```
+
 ## Additional Operations
 ### Append Elements to the Vector
 ```cpp
